@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        
+        num1 = prompt ("Dame un numero:")
+        num2 = prompt ("Dame otro numero:")
+
+        function sumar (num1, num2) {
+
+            return num1 + num2;
+        }
+
+        function restar (num1, num2) {
+
+            return num1 - num2;
+        }
+
+        function multiplicacion (num1, num2) {
+
+            return num1 * num2;
+        }
+
+        function dividir (num1, num2) {
+
+            return num1 / num2;
+        }
+
+    </script>
+</head>
+<body>
+    <input type="button" onclick="alert (sumar (parseInt(num1), parseInt(num2)));" value="sumar">
+    <input type="button" onclick="alert (restar (parseInt(num1), parseInt(num2)));" value="restar">
+    <input type="button" onclick="alert (multiplicar (parseInt(num1), parseInt(num2)));" value="multiplicar">
+    <input type="button" onclick="alert (dividir (parseInt(num1), parseInt(num2)));" value="dividir">
+</body>
+</html>
