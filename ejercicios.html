@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EJERCICIOS DE JAVASCRIPT</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #9acf9b;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        input {
+            margin: 10px;
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+        }
+
+        input:hover {
+            background-color: #45a049;
+        }
+    </style>
+    <script>
+
+        function saludo() {
+            hola = "Hola "
+            nomb = "Dime tu nombre"
+            var nombre = prompt (nomb)
+            alert (hola + nombre)
+        
+        }
+
+        function sumar() {
+            var num1 = prompt ("Dame un numero")
+            var num2 = prompt ("Otro numero")
+            alert (parseInt(num1) + parseInt(num2))
+        }
+
+        function edad() {
+            var num = parseInt(prompt ("Dame un numero"))
+            if (num >= 18 ){
+                alert ("Mayor de edad");
+            }else {
+                alert ("Menor de edad");
+            }
+        }
+
+        function contar() {
+            var contador = 0;
+
+            for (var i = 0; i < 10; i++) {
+                contador++;
+                alert(contador);
+            }
+        }
+
+        function factorial () {
+            var numero = parseInt(prompt("Dame un número:"));
+            var factorial = 1;
+            for (var i = 1; i <= numero; i++) {
+                factorial *= i;
+            }
+            alert("El factorial de " + numero + " es: " + factorial);
+        }
+
+        function lista () {
+            var listaCompra = [];
+            for (var i = 0; i < 5; i++) {
+                var item = prompt("Añade algo a la lista de la compra:");
+                listaCompra.push(item);
+            }
+            alert("Lista de la compra: " + listaCompra.join(", "));
+        }
+
+        function parimpar () {
+            for (var i = 1; i <= 10; i++) {
+                if (i % 2 === 0) {
+                    alert(i + " es un número par.");
+                } else {
+                    alert(i + " es un número impar.");
+                }
+            }
+        }
+
+        function contraseña () {
+            var contrasena = prompt("Ingresa una contraseña:");
+            if (contrasena.length > 6) {
+                alert("Contraseña válida");
+            } else {
+                alert("La contraseña debe tener más de 6 caracteres. Intenta nuevamente.");
+            }
+        }
+
+        function adivinar () {
+            var numeroAleatorio = Math.floor(Math.random() * 10) + 1;
+            for (var intentos = 1; intentos <= 3; intentos++) {
+                var suposicion = parseInt(prompt("Intento #" + intentos + ": Adivina el número (entre 1 y 10):"));
+                if (suposicion === numeroAleatorio) {
+                    alert("¡Correcto! Has adivinado el número.");
+                    break;
+                } else {
+                    alert("Incorrecto");
+                }
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>EJERCICIOS DE JAVASCRIPT</h1>
+        <input type="button" onclick="saludo()" value="Saludo">
+        <input type="button" onclick="sumar()" value="Sumar">
+        <input type="button" onclick="edad()" value="Verificar Edad">
+        <br>
+        <input type="button" onclick="contar()" value="Contador">
+        <input type="button" onclick="factorial()" value="Factorial">
+        <input type="button" onclick="lista()" value="Lista Compra">
+        <br>
+        <input type="button" onclick="parimpar()" value="Par e Impar">
+        <input type="button" onclick="contraseña()" value="Validar Contraseña">
+        <input type="button" onclick="adivinar()" value="Adivinar Número">
+    </div>
+</body>
+</html>
