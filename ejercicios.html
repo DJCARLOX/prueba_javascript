@@ -42,10 +42,8 @@
     <script>
 
         function saludo() {
-            hola = "Hola "
-            nomb = "Dime tu nombre"
-            var nombre = prompt (nomb)
-            alert (hola + nombre)
+            var nombre = prompt ("Dime tu nombre")
+            alert ("Hola " + nombre)
         
         }
 
@@ -83,44 +81,35 @@
         }
 
         function lista () {
-            var listaCompra = [];
+            var lista_compra = [];
             for (var i = 0; i < 5; i++) {
-                var item = prompt("Añade algo a la lista de la compra:");
-                listaCompra.push(item);
+                var compra = prompt("Añade algo a la lista de la compra:");
+                lista_compra.push(compra);
             }
-            alert("Lista de la compra: " + listaCompra.join(", "));
+            alert("Lista de la compra: " + lista_compra);
         }
 
         function parimpar () {
             for (var i = 1; i <= 10; i++) {
-                if (i % 2 === 0) {
-                    alert(i + " es un número par.");
+                if (i % 2 == 0) {
+                    alert(i + " es par");
                 } else {
-                    alert(i + " es un número impar.");
+                    alert(i + " es impar");
                 }
             }
         }
 
         function contraseña () {
-            var contrasena = prompt("Ingresa una contraseña:");
+            var contrasena = prompt("Dame una contraseña:");
             if (contrasena.length > 6) {
                 alert("Contraseña válida");
             } else {
-                alert("La contraseña debe tener más de 6 caracteres. Intenta nuevamente.");
+                alert("La contraseña debe tener más de 6 caracteres. Intentalo de nuevo");
             }
         }
-
+        
         function adivinar () {
-            var numeroAleatorio = Math.floor(Math.random() * 10) + 1;
-            for (var intentos = 1; intentos <= 3; intentos++) {
-                var suposicion = parseInt(prompt("Intento #" + intentos + ": Adivina el número (entre 1 y 10):"));
-                if (suposicion === numeroAleatorio) {
-                    alert("¡Correcto! Has adivinado el número.");
-                    break;
-                } else {
-                    alert("Incorrecto");
-                }
-            }
+            alert ("No sé como hacer esto :(")
         }
 
     </script>
